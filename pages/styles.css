@@ -3,7 +3,8 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .header{
@@ -41,19 +42,23 @@ ul {
 .container-one, .container-two, .container-three, .container-four {
     flex: 1;
     width: 100%;
+    min-height: fit-content;
 }
 .container-one {
     background-color: #1f2937;
     color: #F9FAF8;
     display: flex;  
-    justify-content: space-around;
-    align-items: center;    
-    padding: 32px;  
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-flow: row;   
+    flex-wrap: wrap-reverse;
+    padding-top: 52px;
 }
 .one-left {
-    padding-left: 128px;
-    margin: 16px;
+    margin: 24px;
     max-width: 750px;
+    border-left: 24px;
+    padding-left: 2rem;
 }
 
 .header-one {
@@ -77,34 +82,70 @@ button {
 }
 img  {
     border-radius: 10px;
-    margin:  32px 128px;
 }  
 
 .container-two {
     gap: 52px;
     justify-content: center;
     text-align: center;
-    padding: 32px;
+    margin: 32px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 .images-two {
     gap: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 .items-two {
-    width:480px;
+    width:240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 .header-two {
-font-size: 36px;
-font-weight: 800;
-margin: 24px
+    font-size: 36px;
+    font-weight: 800;
+    margin: 24px;
+    color: #1F2937;
+}
+.text-two  {
+    color: rgb(75, 75, 75);
+    flex-wrap: wrap;
+    width: 200px;
 }
 
 .container-three {
     background-color: #e5e7eb;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+}
+.content-three {
+    display: flex;
+    flex-direction: column;
+}
+.text-three {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    max-width: 800px;
+    margin: 60px;
 }
 
+.name-three {
+    font-size: 24px;
+    font-weight: 800px;
+    color: #1f2937;
+    margin: 52px;
+    white-space: nowrap;
+    text-align: right;
+}
 
 .footer {  
     background-color: #1f2937;
